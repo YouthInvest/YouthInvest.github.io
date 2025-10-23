@@ -6,18 +6,18 @@
 }
 
 :root {
-    --primary-blue: #1e6bb8;
-    --secondary-blue: #2c8ae6;
-    --accent-blue: #155fa0;
-    --dark-blue: #0d4d8c;
-    --light-blue: #3498db;
+    --primary-blue: #4a90e2;
+    --secondary-blue: #6ba8ff;
+    --accent-blue: #2a78e6;
+    --dark-blue: #1e5bb8;
+    --light-blue: #87ceeb;
     --white: #ffffff;
     --text-dark: #333333;
-    --text-light: #e0e0e0;
+    --text-light: #e6f2ff;
 }
 
 body {
-    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     color: var(--white);
     line-height: 1.6;
     min-height: 100vh;
@@ -30,9 +30,12 @@ body {
     padding: 0 15px;
 }
 
+/* Bubble Letter Font */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
 /* Header Styles */
 header {
-    background-color: rgba(13, 77, 140, 0.95);
+    background-color: rgba(30, 91, 184, 0.95);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
@@ -65,12 +68,15 @@ header {
     font-weight: bold;
     font-size: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .logo-text {
     font-size: 24px;
     font-weight: 700;
     color: var(--white);
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .logo-text span {
@@ -94,12 +100,13 @@ nav ul li a {
     transition: all 0.3s;
     padding: 5px 0;
     position: relative;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
     color: var(--light-blue);
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 nav ul li a.active::after {
@@ -110,7 +117,7 @@ nav ul li a.active::after {
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, var(--light-blue), var(--secondary-blue));
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    box-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 /* Button Styles */
@@ -128,6 +135,7 @@ nav ul li a.active::after {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .btn:hover {
@@ -158,7 +166,7 @@ nav ul li a.active::after {
 
 /* Hero Sections */
 .hero {
-    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     color: white;
     padding: 100px 0;
     text-align: center;
@@ -173,16 +181,22 @@ nav ul li a.active::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(52, 152, 219, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(30, 107, 184, 0.2) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 20%, rgba(135, 206, 235, 0.4) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(74, 144, 226, 0.3) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .hero h1 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero p {
@@ -190,11 +204,12 @@ nav ul li a.active::after {
     max-width: 700px;
     margin: 0 auto 30px;
     color: var(--text-light);
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .page-hero {
-    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     color: white;
     padding: 80px 0;
     text-align: center;
@@ -209,15 +224,21 @@ nav ul li a.active::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(52, 152, 219, 0.2) 0%, transparent 50%);
+    background: radial-gradient(circle at 70% 30%, rgba(135, 206, 235, 0.3) 0%, transparent 50%);
     pointer-events: none;
 }
 
 .page-hero h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 15px;
     font-weight: 700;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .page-hero p {
@@ -225,7 +246,8 @@ nav ul li a.active::after {
     max-width: 600px;
     margin: 0 auto;
     color: var(--text-light);
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* CTA Sections */
@@ -238,32 +260,36 @@ nav ul li a.active::after {
 }
 
 .cta-box {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     padding: 30px;
     width: 300px;
     backdrop-filter: blur(10px);
     transition: all 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .cta-box:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .cta-box h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 15px;
     color: var(--white);
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .cta-box p {
     font-size: 16px;
     margin-bottom: 20px;
     color: var(--text-light);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Section Styles */
@@ -278,18 +304,25 @@ nav ul li a.active::after {
 }
 
 .section-title h2 {
-    font-size: 36px;
+    font-size: 42px;
     color: var(--white);
     margin-bottom: 15px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .section-title p {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .text-center {
@@ -305,8 +338,8 @@ nav ul li a.active::after {
 }
 
 .program-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     padding: 30px;
     flex: 1;
     min-width: 300px;
@@ -314,18 +347,18 @@ nav ul li a.active::after {
     transition: all 0.3s;
     text-align: center;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .program-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .program-icon {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue));
     border-radius: 50%;
     display: flex;
@@ -333,19 +366,23 @@ nav ul li a.active::after {
     justify-content: center;
     margin: 0 auto 20px;
     color: white;
-    font-size: 28px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .program-card h3 {
-    font-size: 22px;
+    font-size: 26px;
     color: var(--white);
     margin-bottom: 15px;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .program-card p {
     color: var(--text-light);
     margin-bottom: 20px;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* About Content */
@@ -362,17 +399,25 @@ nav ul li a.active::after {
 }
 
 .about-text h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--white);
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .about-text h3 {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--white);
     margin: 30px 0 15px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
 }
 
 .about-text p {
@@ -380,7 +425,8 @@ nav ul li a.active::after {
     color: var(--text-light);
     font-size: 16px;
     line-height: 1.7;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .about-cards {
@@ -392,24 +438,24 @@ nav ul li a.active::after {
 }
 
 .about-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     padding: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .about-card:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue));
     border-radius: 50%;
     display: flex;
@@ -417,20 +463,24 @@ nav ul li a.active::after {
     justify-content: center;
     margin-bottom: 15px;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about-card h4 {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--light-blue);
     margin-bottom: 10px;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .about-card p {
     color: var(--text-light);
     line-height: 1.6;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Target Market */
@@ -444,22 +494,25 @@ nav ul li a.active::after {
 .market-group {
     flex: 1;
     min-width: 200px;
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(135, 206, 235, 0.3);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .market-group h4 {
     color: var(--white);
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .market-group p {
     color: var(--text-light);
     margin: 0;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Mission Preview */
@@ -479,23 +532,25 @@ nav ul li a.active::after {
     min-width: 200px;
     text-align: center;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .stat h3 {
     font-size: 42px;
     color: var(--light-blue);
     margin-bottom: 10px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .stat p {
     color: var(--text-light);
     font-size: 16px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Analysis Section */
@@ -514,7 +569,8 @@ nav ul li a.active::after {
     margin-bottom: 40px;
     color: var(--text-light);
     line-height: 1.7;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .stats-grid {
@@ -533,25 +589,29 @@ nav ul li a.active::after {
     font-weight: bold;
     color: var(--light-blue);
     margin-bottom: 10px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .stat-label {
     color: var(--text-light);
     font-size: 16px;
     max-width: 150px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Value Section */
 .value-section {
-    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     color: white;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 40px auto;
     max-width: 1200px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .value-section .section-title h2 {
@@ -573,7 +633,8 @@ nav ul li a.active::after {
     font-size: 20px;
     line-height: 1.6;
     color: var(--text-light);
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Program Detail Pages */
@@ -596,20 +657,22 @@ nav ul li a.active::after {
     flex: 1;
     min-width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
-    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .program-number {
     font-size: 120px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.15);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .program-info {
@@ -618,10 +681,16 @@ nav ul li a.active::after {
 }
 
 .program-info h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--white);
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .program-info p {
@@ -629,7 +698,8 @@ nav ul li a.active::after {
     color: var(--text-light);
     margin-bottom: 20px;
     line-height: 1.7;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .program-features {
@@ -646,13 +716,14 @@ nav ul li a.active::after {
     color: var(--light-blue);
     margin-right: 10px;
     font-size: 18px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .feature span {
     color: var(--text-light);
     font-size: 16px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Marketing Plan */
@@ -669,24 +740,28 @@ nav ul li a.active::after {
 .marketing-card {
     flex: 1;
     min-width: 300px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .marketing-card h3 {
-    font-size: 22px;
+    font-size: 24px;
     color: var(--light-blue);
     margin-bottom: 15px;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .marketing-card p {
     color: var(--text-light);
     line-height: 1.6;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Apply Page Styles */
@@ -700,11 +775,17 @@ nav ul li a.active::after {
 }
 
 .apply-content h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--white);
     margin-bottom: 20px;
     text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .apply-content p {
@@ -712,15 +793,18 @@ nav ul li a.active::after {
     color: var(--text-light);
     margin-bottom: 30px;
     line-height: 1.7;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .teams-overview h3 {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--white);
     margin: 40px 0 20px;
     text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
 }
 
 .team-cards {
@@ -733,25 +817,28 @@ nav ul li a.active::after {
 .team-card {
     flex: 1;
     min-width: 200px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .team-card h4 {
     color: var(--light-blue);
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .team-card p {
     color: var(--text-light);
     font-size: 14px;
     margin: 0;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 /* Application Form */
@@ -762,26 +849,32 @@ nav ul li a.active::after {
 .form-container {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .form-container h2 {
-    font-size: 28px;
+    font-size: 32px;
     color: var(--white);
     margin-bottom: 30px;
     text-align: center;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .form-section {
     margin-bottom: 40px;
     padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .form-section:last-of-type {
@@ -789,10 +882,12 @@ nav ul li a.active::after {
 }
 
 .form-section h3 {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--light-blue);
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
 }
 
 .form-group {
@@ -804,7 +899,8 @@ nav ul li a.active::after {
     margin-bottom: 8px;
     font-weight: 600;
     color: var(--white);
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .form-group input,
@@ -812,18 +908,20 @@ nav ul li a.active::after {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
     font-size: 16px;
     transition: all 0.3s;
     color: var(--white);
     backdrop-filter: blur(10px);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: rgba(255, 255, 255, 0.6);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .form-group input:focus,
@@ -831,8 +929,8 @@ nav ul li a.active::after {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--light-blue);
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
-    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.3);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .checkbox-group {
@@ -847,6 +945,7 @@ nav ul li a.active::after {
     cursor: pointer;
     font-weight: normal;
     color: var(--text-light);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .checkbox-label input {
@@ -876,17 +975,24 @@ nav ul li a.active::after {
 }
 
 .contact-info h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--white);
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .contact-info p {
     color: var(--text-light);
     margin-bottom: 30px;
     line-height: 1.7;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .contact-details {
@@ -900,8 +1006,8 @@ nav ul li a.active::after {
 }
 
 .contact-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--light-blue), var(--secondary-blue));
     border-radius: 50%;
     display: flex;
@@ -909,22 +1015,24 @@ nav ul li a.active::after {
     justify-content: center;
     margin-right: 15px;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-text h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--white);
     margin-bottom: 5px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .contact-text p {
     margin: 0;
     color: var(--text-light);
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .social-links {
@@ -937,17 +1045,18 @@ nav ul li a.active::after {
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
     text-decoration: none;
     color: var(--white);
     transition: all 0.3s;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .social-link:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     transform: translateX(5px);
 }
 
@@ -961,19 +1070,25 @@ nav ul li a.active::after {
 .contact-form {
     flex: 1;
     min-width: 300px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 25px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form h2 {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--white);
     margin-bottom: 20px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, var(--white), var(--light-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* FAQ Section */
@@ -987,13 +1102,13 @@ nav ul li a.active::after {
 }
 
 .faq-item {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     margin-bottom: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .faq-question {
@@ -1006,14 +1121,15 @@ nav ul li a.active::after {
 }
 
 .faq-question:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .faq-question h3 {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--white);
     margin: 0;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .faq-question i {
@@ -1033,7 +1149,8 @@ nav ul li a.active::after {
     color: var(--text-light);
     line-height: 1.6;
     margin: 0;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .faq-item.active .faq-question i {
@@ -1047,17 +1164,20 @@ nav ul li a.active::after {
 
 /* Locations */
 .locations {
-    background: rgba(13, 77, 140, 0.8);
+    background: rgba(30, 91, 184, 0.8);
     padding: 40px 0;
     text-align: center;
     backdrop-filter: blur(10px);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .locations p {
     font-size: 18px;
     color: var(--white);
     font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .locations i {
@@ -1067,11 +1187,11 @@ nav ul li a.active::after {
 
 /* Footer */
 footer {
-    background: rgba(13, 77, 140, 0.95);
+    background: rgba(30, 91, 184, 0.95);
     color: white;
     padding: 50px 0 20px;
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-content {
@@ -1088,10 +1208,12 @@ footer {
 }
 
 .footer-column h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 20px;
     color: var(--light-blue);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 1px;
 }
 
 .footer-column ul {
@@ -1106,18 +1228,20 @@ footer {
     color: var(--text-light);
     text-decoration: none;
     transition: all 0.3s;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .footer-column ul li a:hover {
     color: var(--light-blue);
-    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    text-shadow: 0 0 10px rgba(135, 206, 235, 0.5);
 }
 
 .footer-column p {
     color: var(--text-light);
     line-height: 1.6;
     margin-bottom: 20px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .social-icons {
@@ -1131,26 +1255,27 @@ footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     color: white;
     font-size: 18px;
     transition: all 0.3s;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .social-icons a:hover {
     background: var(--light-blue);
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 5px 15px rgba(135, 206, 235, 0.4);
 }
 
 .copyright {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Bubblegum Sans', cursive;
 }
